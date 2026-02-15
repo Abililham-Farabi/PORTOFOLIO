@@ -1,123 +1,130 @@
+/* =====================
+   GLOBAL (DESKTOP FIRST)
+   ===================== */
+
 body {
     background-color: #f6f6f6;
+    overflow-x: hidden;
 }
 
 .navbar {
-    padding-top: 30px;
-    text-align: center;
+    max-height: 80px;
+    width: 100vw;
+    align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
     position: fixed;
-    background: none;
+    background-color: #ffff;
 }
 
+.navbar ul {
+    list-style-type: none;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: center;
+    gap: 20px;
+}
+
+.navbar li {
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar ul a:hover {
+    text-decoration: none;
+    color: rgb(218, 217, 217);
+    cursor: pointer;
+}
+
+/* HERO */
 .hero {
     display: flex;
-    padding-left: 100px;
-    padding-top: 100px;
+    justify-content: space-between;
+    padding: 120px 100px 0;
     font-weight: bold;
+    position: relative;
+    top: 60px;
 }
 
-.judulkiri,
-.tulisan-bawah-judul {
-    letter-spacing: 1px;
-    text-align: left;
-    width: 500px;
-    margin-left: 30px;
-    margin-top: 75px;
+.kiri-teks {
+    max-width: 500px;
 }
 
 .judulkiri {
     font-family: 'Poppins', sans-serif;
     font-size: 4rem;
-    margin-left: 110px;
+    letter-spacing: 1px;
 }
 
-
-
 .tulisan-bawah-judul {
-    padding: 12px;
-    margin-top: 16px;
+    margin-top: 20px;
     font-size: 1.1rem;
 }
 
+/* KANAN */
 .full-kanan {
-    height: auto;
-    width: auto;
-    margin-right: 900px;
-    margin-top: 75px;
-
+    display: flex;
+    align-items: center;
 }
 
-.foto img {
-    width: 300px;
-    height: auto;
-    margin-left: auto;
-    border-radius: 10%;
+.kanan-gambar {
+    display: flex;
+    flex-direction: column;
 }
 
 .foto {
     display: flex;
-    gap: 10px;
-
+    gap: 15px;
 }
 
-.kanan-gambar {
-    margin-left: 50px;
-    height: fit-content;
-    width: fit-content;
+.foto img {
+    width: 300px;
+    border-radius: 12px;
 }
 
+/* SKILL + SOSMED */
 .bungkus-skill-medsos {
     display: flex;
+    margin-top: 20px;
+    align-items: center;
 }
 
 .skill {
-    height: 50px;
-    width: 200px;
-    margin-top: 20px;
-    margin-bottom: 90px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
     font-size: 3.5rem;
-    text-align: center;
-    padding-bottom: 5px;
-    padding-top: 10px;
-    line-height: 60px;
-
 }
 
 .heromedsos {
-    width: auto;
-    text-align: center;
-    padding-left: 140px;
-    padding-top: 43px;
+    margin-left: 40px;
 }
 
-svg {
-    margin-left: 1px;
+hr {
+    position: relative;
+    top: 50px;
 }
 
-.medsos {
-    text-align: center;
-}
-
+/* PROJECT */
 .garis1 {
     margin-top: 150px;
 }
 
 .full-project {
-    margin-top: 40px;
-    padding-bottom: 100px;
-    padding-top: 30px;
+    padding: 40px 0 100px;
+    margin-top: 100px;
 }
 
 .tulisan-project {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
     font-size: 2rem;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .bagian-project {
@@ -127,12 +134,76 @@ svg {
 
 .project {
     width: 18rem;
-    margin-left: 80px;
-    margin-right: 50px;
+    margin: 0 40px;
     text-align: center;
 }
 
-.nama-project {
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* =====================
+   MOBILE ONLY
+   ===================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding-top: 10px;
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 120px 20px 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .kiri-teks {
+        max-width: 100%;
+    }
+
+    .judulkiri {
+        font-size: 2.2rem;
+    }
+
+    .tulisan-bawah-judul {
+        font-size: 1rem;
+    }
+
+    .full-kanan {
+        margin-top: 40px;
+    }
+
+    .foto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto img {
+        width: 220px;
+    }
+
+    .bungkus-skill-medsos {
+        flex-direction: column;
+    }
+
+    .skill {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .heromedsos {
+        margin: 0;
+    }
+
+    .bagian-project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        margin: 20px 0;
+    }
+
+    .garis1 {
+        margin-top: 80px;
+    }
 }
